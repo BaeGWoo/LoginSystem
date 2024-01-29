@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login 페이지(feat.MySQL, NodeJS)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--css파일을 참조하기 위한 link태그-->
+    <link rel="stylesheet" href="Login.css">
+</head>
+
+<body>
+    <!--전체적으로 관리하기 위한 큰 div 태그-->
+    <div class="MainContainer">
+
+        <!--로그인 시트 디자인을 위한 중간 div태그-->
+        <div class="MainContainerDesign">
+            <div class="circle">
+                <div class="circle-image"></div>
+            </div>
+
+
+            <!--로그인을 위한 id와 password를 입력하는 input상자들을 통합해놓은 div태그-->
+            <div class="InputTable">
+                <!--action경로로 post 요청을 보내는 form 태그-->
+                <form method="post" action="http://realmeta.co.kr:3003/LoginCheck">
+                    <table>
+                        <tr><td><input type="text" name="name" placeholder="ID"></td></tr>
+                        <tr><td><input type="password" name="password" placeholder="Password"></td></tr>
+                    </table>
+            </div><!--InputTable-->
+
+
+            <!--버튼들을 통제하기 위한 div태그-->
+            <div class="SignContainer">
+                <!--input상자중 submit타입을 이용해서 로그인을 누르면 form내의 데이터를 지정한 경로로 전달-->
+                <input type="submit" value="로그인">
+                </form>
+
+
+                <!--폴더 내의 경로를 통해 버튼을 누르면 회원가입을 위한 페이지로 이동시키는 a태그-->
+                <a href="./public/adduser.html"><button>회원가입</button></a>
+            </div><!--SignContainer-->
+        </div><!--MainContainerDesign-->
+    </div><!--MainContainer-->
+</body>
+
+</html>
